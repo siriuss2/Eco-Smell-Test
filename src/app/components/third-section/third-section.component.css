@@ -1,0 +1,13 @@
+.feature-icon {
+    height: 100px;
+  }
+  
+  .feature-icon img {
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  h5 {
+    color: #425C45; /* Example color matching the image text */
+  }
+  

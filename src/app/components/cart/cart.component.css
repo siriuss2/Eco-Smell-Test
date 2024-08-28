@@ -1,0 +1,150 @@
+/* General Styling */
+.container {
+  max-width: 900px; /* Increased max width for better layout */
+  margin-bottom: 40px; /* Added some margin at the bottom */
+  background-color: #ffffff; /* White background for the container */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Added padding inside the container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Shopping Cart */
+h2 {
+  font-weight: bold;
+  font-size: 2rem; /* Increased font size */
+  color: #a2cd97; /* Added a blue color to the heading */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 2px; /* Added letter spacing */
+}
+
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added smooth transition for box-shadow */
+  border: none; /* Removed the border */
+  border-radius: 10px; /* Added rounded corners */
+  overflow: hidden; /* Ensures the image doesn’t overflow */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.card-img-top {
+  height: 200px; /* Fixed height for the image */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  border-bottom: 2px solid #f8f9fa; /* Added a border below the image */
+}
+
+.card-title {
+  font-weight: 600; /* Made the title slightly bolder */
+  color: #343a40; /* Darker color for the title */
+}
+
+.card-text {
+  color: #6c757d; /* Muted color for the text */
+}
+
+.btn-outline-danger {
+  color: #dc3545;
+  border-color: #dc3545;
+  font-weight: 600; /* Made the button text bold */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for color and background */
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.4); /* Added a shadow on hover */
+}
+
+/* Total Price Section */
+.mt-4 {
+  font-size: 1.25rem; /* Increased font size */
+  background-color: #e9ecef; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside the total price section */
+  text-align: right; /* Aligned text to the right */
+  font-weight: 600; /* Made the text bold */
+}
+
+/* Order Form */
+.bg-light {
+  background-color: #f8f9fa !important;
+  border-radius: 8px; /* Rounded corners for the form */
+  padding: 20px; /* Added padding inside the form */
+  margin-top: 40px; /* Added margin to separate from the cart */
+}
+
+.form-label {
+  font-weight: 600; /* Made the labels bold */
+  color: #495057; /* Slightly darker color for the labels */
+  font-size: 1.1rem; /* Increased font size */
+}
+
+.form-control {
+  border-radius: 5px; /* Rounded corners for the input fields */
+  padding: 10px; /* Added padding inside the input fields */
+  border: 2px solid #ced4da; /* Thicker border for better visibility */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for the border color */
+}
+
+.form-control:focus {
+  border-color: #a2cd97; /* Blue border on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Added a blue glow on focus */
+}
+
+.btn-success {
+  font-size: 1.2rem; /* Increased font size */
+  font-weight: bold; /* Made the button text bold */
+  padding: 12px 0; /* Added padding inside the button */
+  border-radius: 8px; /* Rounded corners for the button */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for background and scale */
+}
+
+.btn-success:hover {
+  background-color: #28a745; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly scales up the button on hover */
+}
+
+/* Empty Cart */
+.text-muted {
+  color: #6c757d; /* Slightly darker muted color */
+}
+
+.btn-primary {
+  font-size: 1.2rem; /* Increased font size */
+  font-weight: 600; /* Made the button text bold */
+  padding: 12px 30px; /* Added padding inside the button */
+  border-radius: 8px; /* Rounded corners for the button */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for background and scale */
+}
+
+.btn-primary:hover {
+  background-color: #a2cd97; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly scales up the button on hover */
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.notification.success {
+  background-color: #28a745; /* Green for success */
+}
+
+.notification.error {
+  background-color: #dc3545; /* Red for error */
+}
+
+.notification.fade-out {
+  opacity: 0;
+}
+

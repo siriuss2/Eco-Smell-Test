@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="container py-5">
+    <div class="row">
+      <div class="col-12 text-center mb-4">
+        <h1 class="display-5 fw-bold">Новости</h1>
+        <p class="lead">Останете во тек со најновите трендови, совети и увиди од нашиот блог.</p>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-4" *ngFor="let blog of blogs">
+        <div class="card h-100" (click)="viewBlogDetails(blog.id)" style="cursor: pointer;">
+          <img src="{{ blog.image }}" class="card-img-top" alt="{{ blog.title }}" style="object-fit: cover; width: 100%; height: 400px;">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">{{ blog.title }}</h5>
+            <p class="card-text">{{ blog.description | slice:0:100 }}...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<app-footer></app-footer>

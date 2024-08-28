@@ -1,0 +1,27 @@
+/* Optional custom styles for your contact page */
+.container {
+    max-width: 900px;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  iframe {
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  button {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  

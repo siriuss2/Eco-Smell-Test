@@ -1,0 +1,68 @@
+/* General Footer Styles */
+footer.bg-light {
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  
+  footer.text-dark {
+    color: #212529; /* Dark text color */
+  }
+  
+  footer.py-4 {
+    padding-top: 1.5rem; /* Adjust top padding */
+    padding-bottom: 1.5rem; /* Adjust bottom padding */
+  }
+  
+  footer.mt-5 {
+    margin-top: 3rem; /* Add top margin */
+  }
+  
+  /* Footer Headings */
+  footer h5.fw-bold {
+    font-size: 1.25rem; /* Font size for headings */
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 1rem; /* Margin below headings */
+  }
+  
+  /* Contact Information */
+  footer .list-unstyled {
+    padding-left: 0; /* Remove default padding */
+  }
+  
+  footer .list-unstyled li {
+    margin-bottom: 0.5rem; /* Space between list items */
+  }
+  
+  footer .list-unstyled ul {
+    padding-left: 1.25rem; /* Indentation for nested lists */
+    list-style-type: none; /* Remove default list style */
+  }
+  
+  /* Social Media Links */
+  footer .d-flex {
+    gap: 1rem; /* Space between social media icons */
+  }
+  
+  footer .bi {
+    font-size: 1.5rem; /* Size of social media icons */
+    color: #212529; /* Dark color for icons */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+  
+  footer .bi:hover {
+    color: #007bff; /* Color change on hover */
+  }
+  
+  /* Additional Info */
+  footer p {
+    margin-bottom: 0.5rem; /* Space between paragraphs */
+  }
+  
+  /* Footer Bottom Section */
+  footer .text-center.py-3 {
+    background-color: #e9ecef; /* Slightly darker background for footer bottom */
+  }
+  
+  footer .text-center.small {
+    color: #6c757d; /* Gray color for footer text */
+  }
+  

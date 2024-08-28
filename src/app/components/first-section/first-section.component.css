@@ -1,0 +1,20 @@
+.firstSectionDiv{
+    margin-left: 350px;
+}
+
+.shadow-custom {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* background-color: #F4FFF1; */
+  }
+  
+  .shadow-custom:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .firstSectionHeading{
+    color: #455840;
+  }
+
+  .top-50{
+    top: 40% !important;
+  }

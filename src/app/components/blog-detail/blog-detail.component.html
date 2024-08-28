@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card shadow-lg border-0 rounded-lg mb-4">
+        <!-- <img src="{{ blog.image1 }}" class="card-img-top rounded-top" alt="{{ blog.title }}" style="object-fit: cover; height: 400px;"> -->
+        <div class="card-body">
+          <h2 class="card-title mb-4">{{ blog.title }}</h2>
+          <p class="card-text">{{ blog.paragraph1 }}</p>
+          <p class="card-text mt-3">{{ blog.paragraph2 }}</p>
+          <div class="row g-3 mt-4">
+            <div class="col-12 col-md-6">
+              <img src="{{ blog.image2 }}" alt="" class="img-fluid rounded" style="max-height: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 col-md-6">
+              <img src="{{ blog.image3 }}" alt="" class="img-fluid rounded" style="max-height: 500px; object-fit: cover;">
+            </div>
+          </div>
+          <p class="card-text mt-4">{{ blog.paragraph3 }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+<app-footer></app-footer>

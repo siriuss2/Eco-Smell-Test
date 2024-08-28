@@ -1,0 +1,32 @@
+.card {
+    background-color: #f8f9fa; /* Light background color for the card */
+  }
+  
+  .card-body {
+    padding: 2rem; /* Add more padding to the card body */
+  }
+  
+  .card-title {
+    font-size: 2.5rem; /* Larger title font size */
+    font-weight: 700; /* Bold title */
+    color: #343a40; /* Dark color for the title */
+  }
+  
+  .card-text {
+    font-size: 1.125rem; /* Slightly larger font size for text */
+    color: #495057; /* Darker text color */
+  }
+  
+  .img-fluid {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
+  }
+  
+  .rounded {
+    border-radius: 0.5rem; /* Rounded corners for images */
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Larger shadow for the card */
+  }
+  

@@ -1,0 +1,53 @@
+.card-body h5 {
+    color: #425C45; /* Example color matching the image text */
+  }
+  
+  .card-body a {
+    color: #a2cd97; /* Example color matching the image text */
+  }
+  
+  .card-body a:hover {
+    text-decoration: underline;
+  }
+  
+  .custom-card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-card-img {
+    height: 300px; /* Adjust based on your design */
+    object-fit: cover;
+  }
+  
+  .custom-card-title {
+    font-size: 1.25rem;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .custom-card-title:hover {
+    color: #a2cd97;
+  }
+  
+  .custom-card-button {
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .custom-card-button:hover {
+    color: #a2cd97;
+    transform: translateX(5px);
+  }
+
+  .secondSectionHeading{
+    color: #455840;
+  }

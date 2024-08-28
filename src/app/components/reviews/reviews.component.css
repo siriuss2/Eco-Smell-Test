@@ -1,0 +1,74 @@
+/* General Styles for the Review Section */
+section.py-5.bg-light {
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  
+  .container.text-center {
+    max-width: 1200px; /* Limit the width of the container */
+  }
+  
+  /* Carousel Styles */
+  .carousel-inner {
+    padding: 1rem; /* Add padding inside the carousel */
+  }
+  
+  .carousel-item {
+    padding: 1rem; /* Add padding inside each carousel item */
+  }
+  
+  .card {
+    border-radius: 0.75rem; /* Rounded corners for the card */
+    overflow: hidden; /* Hide overflow for rounded corners */
+  }
+  
+  .card-body {
+    background: #fff; /* White background for card body */
+    padding: 1.5rem; /* Padding inside the card body */
+    text-align: center; /* Center text in the card body */
+  }
+  
+  .card-text {
+    font-size: 1rem; /* Font size for review text */
+    line-height: 1.5; /* Line height for better readability */
+  }
+  
+  .text-muted {
+    color: #6c757d; /* Gray color for muted text */
+  }
+  
+  h2.fw-bold.mb-4 {
+    font-size: 2.5rem; /* Font size for the section heading */
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 3rem; /* Width of the carousel controls */
+    height: 3rem; /* Height of the carousel controls */
+    top: 50%; /* Center controls vertically */
+    transform: translateY(-50%); /* Adjust vertical positioning */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Background color of the icons */
+    border-radius: 50%; /* Circular background for the icons */
+  }
+  
+  /* Hover Effects for Carousel Controls */
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 50%; /* Size of the icons */
+  }
+  
+  .reviewsHeading{
+    color: #455840;
+  }
+
+  .card-text{
+    height: 100px;
+  }

@@ -1,0 +1,130 @@
+.navbar .fa-shopping-cart {
+    font-size: 1.5rem;
+  }
+  
+  .navbar .badge {
+    font-size: 0.75rem;
+    padding: 0.25em 0.5em;
+  }
+  
+  .nav-link{
+    font-size: 14px;
+  }
+
+  /* General Navbar Styles */
+
+
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+/* Transition for Opening/Closing */
+.offcanvas {
+  transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas.show {
+  transform: translateX(0);
+}
+
+.offcanvas:not(.show) {
+  transform: translateX(-100%);
+}
+
+/* Optional: Add a box shadow to the offcanvas */
+/* .offcanvas {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+/* Add a custom close button style */
+.offcanvas .btn-close {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+@media( max-width: 576px ){
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .custom-toggler-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000; /* Black color for lines */
+    margin: 5px 0;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+  }
+  
+  /* Hamburger Menu Lines */
+  .navbar-toggler:focus, .navbar-toggler:hover {
+    outline: none;
+  }
+  
+  .offcanvas {
+    background-color: #F4FFF1; /* Match with header background */
+    padding-top: 1rem; /* Space at the top */
+  }
+  
+  /* Offcanvas Header */
+  .offcanvas-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .offcanvas-header h5 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .offcanvas-header .btn-close {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .offcanvas-header .btn-close:hover {
+    opacity: 1;
+  }
+  
+  /* Offcanvas Body */
+  .offcanvas-body {
+    padding: 1rem 1.5rem;
+  }
+  
+  .offcanvas-body .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  
+  .offcanvas-body .nav-link:hover {
+    color: #007bff; /* Highlight on hover */
+  }
+  
+  .offcanvas-body .nav-item + .nav-item {
+    margin-top: 0.5rem;
+  }
+  
+  /* Cart Icon in Navbar */
+  .navbar .bi-cart {
+    font-size: 1.5rem;
+  }
+  
+  .navbar .nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+}
