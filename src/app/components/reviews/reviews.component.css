@@ -18,7 +18,6 @@ section.py-5.bg-light {
   
   .card {
     border-radius: 0.75rem; /* Rounded corners for the card */
-    overflow: hidden; /* Hide overflow for rounded corners */
   }
   
   .card-body {

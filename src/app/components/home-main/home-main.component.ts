@@ -5,11 +5,12 @@ import { SecondSectionComponent } from '../second-section/second-section.compone
 import { ThirdSectionComponent } from '../third-section/third-section.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ReviewsComponent } from '../reviews/reviews.component';
+import { AboutProductComponent } from '../about-product/about-product.component';
 
 @Component({
   selector: 'app-home-main',
   standalone: true,
-  imports: [HeaderComponent, FirstSectionComponent, SecondSectionComponent, ThirdSectionComponent, FooterComponent, ReviewsComponent],
+  imports: [HeaderComponent, FirstSectionComponent, SecondSectionComponent, ThirdSectionComponent, FooterComponent, ReviewsComponent, AboutProductComponent],
   templateUrl: './home-main.component.html',
   styleUrl: './home-main.component.css'
 })

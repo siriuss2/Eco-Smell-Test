@@ -20,7 +20,6 @@ export class CartComponent implements OnInit {
     name: '',
     email: '',
     address: '',
-    category: '',
     city: '',
   };
 
@@ -28,6 +27,9 @@ export class CartComponent implements OnInit {
   private readonly EMAILJS_SERVICE_ID = 'service_4ygobu4'; // Replace with your EmailJS Service ID
   private readonly EMAILJS_TEMPLATE_ID = 'template_8ltlu54'; // Replace with your EmailJS Template ID
   private readonly publicKey = 'SFcimWfSt5kqtMLP5'; // Replace with your EmailJS User ID
+
+  showNotification: boolean = false;
+  showErrorNotification: boolean = false; // Add this flag
 
   constructor(private cartService: CartService) {}
 
@@ -54,7 +56,12 @@ export class CartComponent implements OnInit {
   }
 
   submitOrder(form: NgForm): void {
-    if (form.invalid) return; // Ensure form is valid before proceeding
+    if (form.invalid) {
+      this.showErrorNotification = true; // Show error notification if form is invalid
+      return;
+    }
+
+    this.showErrorNotification = false; // Hide error notification if form is valid
 
     const emailData = {
       to_name: this.order.name, // Recipient's name
@@ -64,7 +71,7 @@ export class CartComponent implements OnInit {
         Адреса: ${this.order.address}
         Град: ${this.order.city}
         Производи:
-        ${this.cartItems.map(item => `${item.category} - ${item.quantity} x ${item.price} ден.`)}
+        ${this.cartItems.map(item => `${item.category} - ${item.quantity} x ${item.price} ден.`).join('\n')}
         Вкупна цена за плаќање: ${this.getTotalPrice()} денари
       `
     };
@@ -72,7 +79,7 @@ export class CartComponent implements OnInit {
     emailjs.send(this.EMAILJS_SERVICE_ID, this.EMAILJS_TEMPLATE_ID, emailData, this.publicKey)
       .then((response) => {
         console.log('Email sent successfully:', response);
-        // Handle success (e.g., show a success message, redirect the user, etc.)
+        this.orderNow(); // Show the notification on successful order
       })
       .catch((error) => {
         console.error('Error sending email:', error);
@@ -80,15 +87,12 @@ export class CartComponent implements OnInit {
       });
   }
 
-  showNotification(type: 'success' | 'error', message: string): void {
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    notification.innerText = message;
+  orderNow() {
+    this.showNotification = true;
 
-    document.body.appendChild(notification);
-
+    // Hide the notification after 3 seconds
     setTimeout(() => {
-      notification.remove();
+      this.showNotification = false;
     }, 3000);
   }
 }

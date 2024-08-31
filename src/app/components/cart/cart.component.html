@@ -64,4 +64,13 @@
   </ng-template>
 </div>
 
+<!-- Notification divs -->
+<div *ngIf="showNotification" class="notification">
+  Нарачката е успешно направена!
+</div>
+
+<div *ngIf="showErrorNotification" class="notification-error">
+  Ве молиме внесете ги сите податоци!
+</div>
+
 <app-footer></app-footer>
