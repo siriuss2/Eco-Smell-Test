@@ -120,6 +120,16 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Notification divs -->
+<div *ngIf="showNotification" class="notification">
+  Продуктот е додаден во кошничка!
+</div>
+
+<div *ngIf="showErrorNotification" class="notification-error">
+  Се појави грешка!
+</div>
   
   
 

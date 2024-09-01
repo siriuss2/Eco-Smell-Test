@@ -5,11 +5,12 @@ import { FooterComponent } from '../footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../services/cart.service';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-collections',
   standalone: true,
-  imports: [HeaderComponent, RouterModule, FooterComponent, CommonModule, FormsModule],
+  imports: [HeaderComponent, RouterModule, FooterComponent, CommonModule, FormsModule, MatSnackBarModule],
   templateUrl: './collections.component.html',
   styleUrl: './collections.component.css'
 })
@@ -210,13 +211,15 @@ export class CollectionsComponent implements OnInit {
   selectedCategories: string[] = [];
   selectedScent: string | null = null;
   selectedSortOption: string = 'best-selling';
+  showNotification: boolean = false;
+  showErrorNotification: boolean = false;
 
   // Pagination variables
   currentPage: number = 1;
   itemsPerPage: number = 3;
   totalPages: number = 0;
 
-  constructor(private cartService: CartService, private router: Router) { }
+  constructor(private cartService: CartService, private router: Router, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.applyFilters();
@@ -280,6 +283,13 @@ export class CollectionsComponent implements OnInit {
   addToCart(product: any): void {
     this.cartService.addToCart(product);
     console.log('Cart items in CollectionsComponent:', this.cartService.getCartItems());
+    
+    this.showNotification = true;
+
+    // Hide the notification after 3 seconds
+    setTimeout(() => {
+      this.showNotification = false;
+    }, 3000);
   }
 
   // Navigate to filtered collections
@@ -288,6 +298,6 @@ export class CollectionsComponent implements OnInit {
     console.log("navigated category:" + category)
     this.selectedCategories = [category]; // Set the selected category
     this.applyFilters(); // Apply filters
-    this.router.navigate(['/collections']); // Navigate to the collections page
+    this.router.navigate(['/колекции']); // Navigate to the collections page
   }
 }
