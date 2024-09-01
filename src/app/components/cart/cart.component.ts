@@ -34,8 +34,10 @@ export class CartComponent implements OnInit {
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.cartItems = this.cartService.getCartItems();
-    console.log('Cart items on load:', this.cartItems); // This should log the cart items
+    this.cartService.cartItems$.subscribe(items => {
+      this.cartItems = items;
+      console.log('Cart items updated:', this.cartItems);
+    });
   }
 
   getTotalPrice(): number {
@@ -43,16 +45,7 @@ export class CartComponent implements OnInit {
   }
 
   removeFromCart(item: any): void {
-    // Find the index of the item in the cart using a unique identifier
-    const index = this.cartItems.findIndex(cartItem => cartItem.id === item.id);
-  
-    if (index !== -1) {
-      // Remove the item from the cart array
-      this.cartItems.splice(index, 1);
-      
-      // Update the local storage with the new cart items array
-      localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
-    }
+    this.cartService.removeFromCart(item);
   }
 
   submitOrder(form: NgForm): void {

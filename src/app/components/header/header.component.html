@@ -40,11 +40,15 @@
         </div>
       </div>
 
-      <div class="d-flex align-items-center ms-auto d-none d-lg-flex">
-        <a class="nav-link text-dark ms-3" routerLink="/кошничка">
+      <div class="d-flex align-items-center ms-auto d-none d-lg-flex position-relative">
+        <a class="nav-link text-dark ms-3 position-relative" routerLink="/кошничка">
           <i class="bi bi-cart fs-5"></i>
+          <span *ngIf="cartItemCount > 0" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{ cartItemCount }}
+          </span>
         </a>
       </div>
+      
     </nav>
   </div>
 </header>

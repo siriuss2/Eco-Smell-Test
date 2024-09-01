@@ -54,7 +54,7 @@ export class CollectionsComponent implements OnInit {
       reviews: 30,
       price: 200,
       quantity: 1,
-      category: ['Self Love Колекција'], // Added categories
+      category: ['Follow Your Heart Колекција'], // Added categories
     },
     {
       id: 6,
@@ -184,6 +184,14 @@ export class CollectionsComponent implements OnInit {
       quantity: 1,
       category: ['Панда Колекција'], // Added categories
     },
+    {
+      id: 22,
+      image: '../../../assets/images/SelfLoveKolekcija/slika5.jpg',
+      reviews: 15,
+      price: 200,
+      quantity: 1,
+      category: ['Self Love Колекција'], // Added categories
+    },
   ];
 
   filteredProducts: any[] = [];
@@ -204,7 +212,6 @@ export class CollectionsComponent implements OnInit {
     this.applyFilters();
   }
 
-  // Method to update filters and apply them
   toggleCategory(category: string): void {
     if (this.selectedCategories.includes(category)) {
       this.selectedCategories = this.selectedCategories.filter(c => c !== category);
@@ -230,7 +237,7 @@ export class CollectionsComponent implements OnInit {
       const matchesCategory = this.selectedCategories.length === 0 || product.category.some(cat => this.selectedCategories.includes(cat));
       return matchesCategory;
     });
-  
+
     // Apply sorting
     filtered.sort((a, b) => {
       if (this.selectedSortOption === 'lowest-to-highest') {
@@ -241,7 +248,7 @@ export class CollectionsComponent implements OnInit {
         return 0;
       }
     });
-  
+
     this.totalPages = Math.ceil(filtered.length / this.itemsPerPage);
     this.filteredProducts = this.paginate(filtered);
   }
@@ -259,9 +266,8 @@ export class CollectionsComponent implements OnInit {
   }
 
   addToCart(product: any): void {
-    this.cartService.addToCart(product);
-    console.log('Cart items in CollectionsComponent:', this.cartService.getCartItems());
-    
+    this.cartService.addToCart({ ...product, quantity: product.quantity });
+
     this.showNotification = true;
 
     // Hide the notification after 3 seconds
@@ -270,12 +276,19 @@ export class CollectionsComponent implements OnInit {
     }, 3000);
   }
 
-  // Navigate to filtered collections
-  navigateToFilteredCollection(category: string): void {
+  increaseQuantity(product: any): void {
+    product.quantity++;
+  }
 
-    console.log("navigated category:" + category)
-    this.selectedCategories = [category]; // Set the selected category
-    this.applyFilters(); // Apply filters
-    this.router.navigate(['/колекции']); // Navigate to the collections page
+  decreaseQuantity(product: any): void {
+    if (product.quantity > 1) {
+      product.quantity--;
+    }
+  }
+
+  navigateToFilteredCollection(category: string): void {
+    this.selectedCategories = [category];
+    this.applyFilters();
+    this.router.navigate(['/колекции']);
   }
 }
