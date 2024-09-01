@@ -71,7 +71,7 @@ export class CartComponent implements OnInit {
         Адреса: ${this.order.address}
         Град: ${this.order.city}
         Производи:
-        ${this.cartItems.map(item => `${item.category} - ${item.quantity} x ${item.price} ден.`).join('\n')}
+        ${this.cartItems.map(item => `ID: ${item.id}, Категорија: ${item.category}, Количина: ${item.quantity} x Цена: ${item.price} ден.`).join('\n')}
         Вкупна цена за плаќање: ${this.getTotalPrice()} денари
       `
     };

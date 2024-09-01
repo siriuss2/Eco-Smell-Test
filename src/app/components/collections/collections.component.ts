@@ -17,193 +17,172 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 export class CollectionsComponent implements OnInit {
   products = [
     {
+      id: 1,
       image: '../../../assets/images/SelfLoveKolekcija/slika1.jpg',
-      badge: 'Fall Scent! Limited Edition',
-      name: 'Plug Hub™ Starter Kit',
       reviews: 15,
       price: 200,
       quantity: 1,
       category: ['Self Love Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 2,
       image: '../../../assets/images/VeligdenskaKolekcija/slika1.jpg',
-      badge: 'Fall Scent! Limited Edition',
-      name: 'Scent Stix + Stand™ Starter Kit',
       reviews: 10,
       price: 200,
       quantity: 1,
       category: ['Велигденска Колекција'], // Added categories
-      scent: 'Rose'
     },
     {
+      id: 3,
       image: '../../../assets/images/PandaCollection/slika1.jpg',
-      badge: 'New Look!',
-      name: 'Scent Spritz™ Starter Kit',
       reviews: 20,
       price: 200,
       quantity: 1,
       category: ['Панда Колекција'], // Added categories
-      scent: 'Citrus'
     },
     {
+      id: 4,
       image: '../../../assets/images/FollowYourHeartKolekcija/slika1.jpg',
-      badge: 'Limited Edition',
-      name: 'Relaxing Scent™ Kit',
       reviews: 40,
       price: 200,
       quantity: 1,
       category: ['Follow Your Heart Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 5,
       image: '../../../assets/images/FollowYourHeartKolekcija/slika4.jpg',
-      badge: 'New Arrival',
-      name: 'Sweet Dreams™ Kit',
       reviews: 30,
       price: 200,
       quantity: 1,
       category: ['Self Love Колекција'], // Added categories
-      scent: 'Rose'
     },
     {
+      id: 6,
       image: '../../../assets/images/LetnaKolekcija/slika1.jpg',
-      badge: 'Best Seller',
-      name: 'Energy Boost™ Kit',
       reviews: 25,
       price: 200,
       quantity: 1,
       category: ['Летна Колекција'], // Added categories
-      scent: 'Citrus'
     },
     {
+      id: 7,
       image: '../../../assets/images/LetnaKolekcija/slika2.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 27,
       price: 200,
       quantity: 1,
       category: ['Летна Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 8,
       image: '../../../assets/images/LetnaKolekcija/slika3.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 16,
       price: 200,
       quantity: 1,
       category: ['Летна Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 9,
       image: '../../../assets/images/LetnaKolekcija/slika4.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 18,
       price: 200,
       quantity: 1,
       category: ['Летна Колекција'], // Added categories
-      scent: 'Lavender'
-    },{
+    },
+    {
+      id: 10,
       image: '../../../assets/images/LetnaKolekcija/slika5.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 23,
       price: 200,
       quantity: 1,
       category: ['Летна Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 11,
       image: '../../../assets/images/LetnaKolekcija/slika6.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 21,
       price: 200,
       quantity: 1,
       category: ['Летна Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 12,
       image: '../../../assets/images/LetnaKolekcija/slika7.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 5,
       price: 200,
       quantity: 1,
       category: ['Летна Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 13,
       image: '../../../assets/images/LetnaKolekcija/slika8.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 7,
       price: 200,
       quantity: 1,
       category: ['Летна Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 14,
       image: '../../../assets/images/ProletnaKolekcija/slika2.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 26,
       price: 200,
       quantity: 1,
       category: ['Пролетна Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 15,
       image: '../../../assets/images/ProletnaKolekcija/slika3.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 11,
       price: 200,
       quantity: 1,
       category: ['Пролетна Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 16,
       image: '../../../assets/images/ProletnaKolekcija/slika4.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 13,
       price: 200,
       quantity: 1,
       category: ['Пролетна Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 17,
       image: '../../../assets/images/ProletnaKolekcija/slika5.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 34,
       price: 200,
       quantity: 1,
       category: ['Пролетна Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 18,
       image: '../../../assets/images/ProletnaKolekcija/slika6.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 26,
       price: 200,
       quantity: 1,
       category: ['Пролетна Колекција'], // Added categories
-      scent: 'Lavender'
     },
     {
+      id: 19,
       image: '../../../assets/images/ProletnaKolekcija/slika7.jpg',
-      badge: 'New Scent!',
-      name: 'Happy Moments™ Kit',
       reviews: 20,
       price: 200,
       quantity: 1,
       category: ['Пролетна Колекција'], // Added categories
-      scent: 'Lavender'
+    },
+    {
+      id: 20,
+      image: '../../../assets/images/PandaCollection/slika2.jpg',
+      reviews: 20,
+      price: 200,
+      quantity: 1,
+      category: ['Панда Колекција'], // Added categories
+    },
+    {
+      id: 21,
+      image: '../../../assets/images/PandaCollection/slika3.jpg',
+      reviews: 20,
+      price: 200,
+      quantity: 1,
+      category: ['Панда Колекција'], // Added categories
     },
   ];
 
@@ -249,8 +228,7 @@ export class CollectionsComponent implements OnInit {
   applyFilters(): void {
     let filtered = this.products.filter(product => {
       const matchesCategory = this.selectedCategories.length === 0 || product.category.some(cat => this.selectedCategories.includes(cat));
-      const matchesScent = !this.selectedScent || product.scent === this.selectedScent;
-      return matchesCategory && matchesScent;
+      return matchesCategory;
     });
   
     // Apply sorting

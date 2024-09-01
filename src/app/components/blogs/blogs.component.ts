@@ -31,7 +31,7 @@ export class BlogsComponent {
   constructor(private router: Router) {}
 
   viewBlogDetails(blogId: number) {
-    this.router.navigate(['/blog', blogId]);
+    this.router.navigate(['/блог', blogId]);
   }
 
 }
